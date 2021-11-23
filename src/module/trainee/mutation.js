@@ -4,14 +4,15 @@ import userInstance from '../../service/user';
 export default{
     createTrainee: (parent, args, context) =>{
         const { user } = args;
-        return userInstance.createUsers(user);
+        console.log(user);
+        return userInstance.createUser(user);
     },
     updateTrainee: (parent, args, context) =>{
         const { id, role } = args;
-        return userInstance.updateUsers(id,role);
+        return userInstance.updateUser(id,role);
     },
     deleteTrainee: (parent, args, context) =>{
         const { id } = args;
-        return userInstance.deleteUsers(id);
+        return userInstance.deleteUser(id);
     }
 }
