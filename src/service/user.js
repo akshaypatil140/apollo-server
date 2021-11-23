@@ -1,28 +1,28 @@
 class User {
     constructor() {
-        this.users=new Map();
+        this.user=new Map();
         this.id=0;
     }
     getAllUser()
     {
-        return this.users;
+        return this.user;
     }
     createUser(user){
         this.id +=1;
-        this.users.set(this.id, { ...user, id: this.id});
-        return this.users.get(this.id);
+        this.user.set(this.id, { ...user, id: this.id});
+        return this.user.get(this.id);
     }
     updateUser( id,role){
-        const user=this.users.get[Number(id)];
-        this.users.set[Number(id),{...user, role}];
-        return this. users.get[Number(id)];
+        const user=this.user.get[Number(id)];
+        this.user.set[Number(id),{...user, role}];
+        return this. user.get[Number(id)];
     }
     deleteUser(id){
-        this.users.delete[Number(id)];
+        this.user.delete[Number(id)];
         return id;
     }
     getUser(id){
-        return this.users.get[Number(id)];
+        return this.user.get[Number(id)];
     }
 }
 
